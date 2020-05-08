@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Часы Куйтуна Ирк.Обл</title>
+	<title>Часы Ирк.Обл</title>
      <link rel="icon" href="favicon.ico" type="images/x-icon">
 </head>
 <body>
-	<!--Стиль CSS-->
-
+	<!--Style CSS-->
+        <!--Css properties adding beauty to the site and objects on the site-->
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
        body{
@@ -57,23 +57,24 @@
 
 <div class="clock"></div>
 
-<!--Сами Часы написанные на JavaScript-->
+<!--Clock written on JavaScript-->
 
 <script>
-    let clock = document.querySelector('.clock')
+    let clock = document.querySelector('.clock')  //
 
     function time() {
     let date = new Date();
-    let hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
+    let hours = date.getHours()
     let min = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
     let sec = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
 
-    //Если код добавляющий 0 не сработал то тут это проверяется и выполняется снова пока не заработает
+    //If the code adding zero did not work, then here it is checked and repeated until it works
     if (hours<10) {hours = '0'+hours;}
     clock.innerHTML = `${hours}:${min}:${sec}`;
 }
 
     setInterval(time , 1000);
 </script>
+	<!--End script (End Code JavaScript)-->
 </body>
 </html>
